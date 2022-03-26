@@ -41,7 +41,7 @@ const ProblemList = () => {
       dt.Problemtitle.toLowerCase().includes(filter.toLowerCase())
     );
     setFilterData(filteredData);
-  }, [filter]);
+  }, [data, filter]);
 
   return (
     <div id={Problem.container}>
