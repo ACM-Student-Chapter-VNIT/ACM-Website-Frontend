@@ -15,6 +15,7 @@ import Editor from "./Components/Codepen/Editor";
 import RegisterBox from "./Components/Login/Register";
 import LoginBox from "./Components/Login/Login";
 import ProjectCard from "./Components/Codepen/ProjectCard";
+import Form from "./Components/problems/Form";
 
 function SiteRouter() {
   return (
@@ -41,9 +42,10 @@ function SiteRouter() {
           <Route path="forgot" exact element={<Forgot />} />
         </Route>
         <Route path="/compiler" exact element={<OnlineCompiler />} />
-				<Route path="/discussion" exact element={<Quora/>} />
+        <Route path="/discussion" exact element={<Quora />} />
         {/* <Route path="/problem-details/:id" exact element={<ProblemDetails />} /> */}
         <Route path="/problem-list" exact element={<ProblemList />} />
+        <Route path="/form" element={<Form formId={new Date().getTime().toString()} />} />
       </Routes>
     </BrowserRouter>
   );
